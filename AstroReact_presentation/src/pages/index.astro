@@ -1,4 +1,9 @@
 ---
+import NavBar from "../components/Navbar"
+import TitlePage from "../components/TitlePage"
+import Carousel from "../components/Carousel"
+import Cards from "../components/Cards"
+import Footer from "../components/Footer"
 ---
 
 <html lang="en">
@@ -7,10 +12,13 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Astro: Build a website with React</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
-		<div>CIAO</div>
+	<body style={{backgroundColor: "#211a1d"}}>
+		<NavBar></NavBar>
+		<TitlePage client:load></TitlePage>
+		<Carousel client:visible></Carousel>
+		<Cards></Cards>
+		<Footer client:visible></Footer>
 	</body>
 </html>
